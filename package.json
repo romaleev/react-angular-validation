@@ -1,0 +1,63 @@
+{
+  "name": "react-angular-validation",
+  "version": "1.0.0",
+  "description": "Password strength indicator",
+  "scripts": {
+		"server": "babel-node server.js",
+		"test": "babel-node unit-test && npm run test-e2e",
+		"build": "npm run build-angular & npm run build-react",
+
+		"build-angular": "cross-env NODE_ENV=production APP=angular webpack -p --config webpack.conf.js",
+		"dev-angular": "cross-env APP=angular webpack --config webpack.conf.js",
+
+		"build-react": "cross-env NODE_ENV=production APP=react webpack -p --config webpack.conf.js",
+		"dev-react": "cross-env APP=react webpack --config webpack.conf.js",
+
+		"test-e2e-prepare": "webdriver-manager start",
+		"test-e2e": "protractor protractor.conf.js",
+
+		"postinstall": "webdriver-manager update"
+	},
+  "author": "Roman Malieiev",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:romaleev/react-angular-validation.git",
+		"private": false
+	},
+  "dependencies": {
+    "react": "0.14.x",
+		"react-dom": "0.14.x",
+		"react-addons-linked-state-mixin": "0.14.x",
+		"angular": "1.5.x",
+		"angular-route": "1.5.x"
+	},
+	"devDependencies": {
+		"express": "4.x.x",
+		"body-parser": "1.x.x",
+		"webpack": "1.x.x",
+		"extract-text-webpack-plugin": "1.x.x",
+		"html-webpack-plugin": "1.7.0",
+		"style-loader": "0.x.x",
+		"css-loader": "0.x.x",
+		"json-loader": "0.x.x",
+		"sass-loader": "3.x.x",
+		"html-loader": "0.4.x",
+		"node-sass": "3.x.x",
+		"babel-core": "6.x.x",
+		"babel-loader": "6.x.x",
+		"babel-eslint": "4.x.x",
+		"babel-cli": "6.x.x",
+		"babel-preset-react": "6.x.x",
+		"babel-preset-es2015": "6.x.x",
+		"eslint": "2.x.x",
+		"estraverse-fb": "1.x.x",
+		"eslint-loader": "1.x.x",
+		"eslint-plugin-react": "4.x.x",
+		"cross-env": "3.x.x",
+		"jasmine": "2.x.x",
+		"protractor": "4.x.x",
+		"protractor-console": "2.x.x",
+		"jasmine-spec-reporter": "2.x.x",
+		"dotenv": "2.x.x"
+  }
+}

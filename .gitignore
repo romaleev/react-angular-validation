@@ -1,0 +1,6 @@
+node_modules/
+build/
+build-angular/
+build-react/
+npm-debug.log
+.idea/

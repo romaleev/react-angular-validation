@@ -1,0 +1,22 @@
+<div class='login-wrapper'>
+	<p class='t1'>
+		Sign up <b>for you</b>.
+	</p>
+	<p class='t2'>It only takes a moment.</p>
+	<form class='login-form' name='loginForm' ng-submit='onSubmit()'>
+		<p class='t3'>Please enter your details.</p>
+		<input id='email' autoFocus ng-model='formData.email' type='email'	placeholder='Email'	ng-disabled='loading' required/>
+		<input id='pass1' name='pass1'	ng-model='formData.pass1'	type='password'	placeholder='New password' ng-disabled='loading'
+					 ng-keydown='invalidate($event)' password required/>
+		<input id='pass2' ng-model='formData.pass2' type='password' placeholder='Confirm new password'
+					 ng-keydown='invalidate($event)' ng-disabled='loading'  required/>
+		<input id='confirm' name="confirm"ng-model="formData.confirm" type='checkbox' ng-disabled='loading' defaultChecked required/>
+		<label htmlFor="confirm">
+			I agree to <a href='https://www.example.com' target='_blank'>terms and conditions</a>
+		</label>
+		<input id='submit' type='submit' ng-click='onClick()' ng-disabled='loading' value='Next >' />
+	</form>
+</div>
+
+<!--ng-class='loginForm.$submitted && loginForm.pass1.$error.password && "has-error"'-->
+<!--<span ng-show="loginForm.$submitted && loginForm.pass1.$error.password">{{validation.pass1}}</span>-->

@@ -1,0 +1,18 @@
+$secondary_color: #1cb3f4;
+$background_color: #f7f7f7;
+$button_color: #fd8332;
+$border_color: lightgrey;
+
+html {
+	-webkit-font-smoothing: antialiased;
+	background-color: $background_color;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+#app{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@import 'Login';

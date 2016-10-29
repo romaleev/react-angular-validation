@@ -1,0 +1,13 @@
+<!doctype html>
+<html ng-app='app'>
+	<head>
+		<meta charset="utf-8">
+		{% if (o.htmlWebpackPlugin.options.app == 'angular') { %} <base href="/"/> {% } %}
+		<link href="/{%= o.htmlWebpackPlugin.options.app %}/styles.css" rel="stylesheet" media="all">
+		<title>Sign up for PWS - {%= o.htmlWebpackPlugin.options.app %}</title>
+	</head>
+	<body>
+		<section id="app" ng-view></section>
+		<script src="/{%= o.htmlWebpackPlugin.options.app %}/script.js"></script>
+	</body>
+</html>
