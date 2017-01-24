@@ -9,7 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var _path = require('path');
 
 var env = process.env.NODE_ENV || 'development',
-		app = process.env.app || 'react',
+		app = process.env.APP || process.env.app || 'react',
 		DEV = env === 'development';
 
 function path(p) {
